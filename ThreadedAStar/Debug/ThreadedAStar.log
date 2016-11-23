@@ -1,10 +1,9 @@
 ﻿  Game.cpp
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(41): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(42): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(43): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(44): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\game.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.exe
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.pdb (Partial PDB)

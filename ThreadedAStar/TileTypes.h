@@ -3,5 +3,7 @@
 enum class TileTypes
 {
 	FLOOR,
-	WALL
+	WALL,
+	PLAYERZONE,
+	NPCZONE
 };

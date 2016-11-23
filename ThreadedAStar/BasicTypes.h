@@ -33,7 +33,13 @@ public:
 	Size2D size;
 	Rect(Point2D p, Size2D s) :pos(p), size(s) {};
 	Rect(float x = 0, float y = 0, float w = 1, float h = 1) :pos(x, y), size(w, h) {};
-	Point2D getCentre() { return Point2D(pos.x + size.w / 2, pos.y + size.h / 2); };
+	Point2D getCentre() const { return Point2D(pos.x + size.w / 2, pos.y + size.h / 2); };
+
+	bool contains(int x, int y) 
+	{
+		return (x >= pos.x && x < pos.x + size.w) 
+			&& (y >= pos.y && y < pos.y + size.h);
+	};
 	
 	SDL_Rect getSDLRect() const 
 	{ 

@@ -29,5 +29,7 @@ public:
 	void initialize();
 	void loop();
 	void update(unsigned int dt);
+	void updateNPCs(unsigned int dt);
 	void render(Renderer* renderer) const;
+	void renderNPCs(Renderer* renderer) const;
 };
