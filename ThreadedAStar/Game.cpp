@@ -11,6 +11,8 @@ Game::Game() :
 	srand(time(NULL));
 	m_renderer = Renderer(m_settings.windowSize, "Astar");
 	m_tileMap = TileMap(m_settings.mapSize);
+
+	cout << "WORKING!" << endl;
 }
 
 Game::~Game() { }
