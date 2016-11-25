@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BasicTypes.h" />
+    <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="EventListener.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameSettings.h" />
@@ -139,6 +140,7 @@
     <ClInclude Include="PathGenerator.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="sorted_vector.h" />
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TileMap.h" />
     <ClInclude Include="TileTypes.h" />

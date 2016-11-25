@@ -4,6 +4,7 @@
 
 
 Game::Game() :
+	m_pathGenerator(PathGenerator()),
 	m_player(Player()),
 	m_running(true)
 { 
@@ -20,13 +21,20 @@ void Game::initialize()
 {
 	m_prevTime = LTimer::gameTime();
 	m_running = m_renderer.initialize();
+	//unsigned int totalTime;
 
 	if (m_running)
 	{
 		m_tileMap.initializeZones(m_settings.playerZoneAsPercentage, m_settings.npcZoneAsPercentage);
 		m_tileMap.initializeWalls(m_settings.wallsAsPercentage);
 		m_tileMap.initializeTiles(m_settings.windowSize);
+		m_pathGenerator.setTileMap(&m_tileMap);
 		initializeNPCs();
+		/*unsigned int previousTime = LTimer::gameTime();
+		m_pathGenerator.generatePath(m_tileMap.getTile(0, 0), m_tileMap.getTile(999, 999));
+		unsigned int afterTime = LTimer::gameTime();
+		totalTime = afterTime - previousTime;*/
+		m_pathGenerator.generatePath(m_tileMap.getRandomTileOfType(TileTypes::FLOOR), m_tileMap.getRandomTileOfType(TileTypes::FLOOR));
 	}
 }
 

@@ -1,9 +1,47 @@
-﻿  Game.cpp
+﻿  PathGenerator.cpp
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.cpp(107): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.cpp(122): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.cpp(141): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.cpp(167): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\priorityqueue.h(30): warning C4018: '<': signed/unsigned mismatch
+  c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\priorityqueue.h(27): note: while compiling class template member function 'void PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>::insert(std::vector<_Ty,std::allocator<_Ty>> *)'
+          with
+          [
+              _Ty=Tile *
+          ]
+  c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.cpp(64): note: see reference to function template instantiation 'void PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>::insert(std::vector<_Ty,std::allocator<_Ty>> *)' being compiled
+          with
+          [
+              _Ty=Tile *
+          ]
+  c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\pathgenerator.h(26): note: see reference to class template instantiation 'PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>' being compiled
+          with
+          [
+              _Ty=Tile *
+          ]
+  Generating Code...
+  Compiling...
+  main.cpp
 c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
 c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
 c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
 c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
 c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\game.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
+  Game.cpp
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\game.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.exe
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.pdb (Partial PDB)

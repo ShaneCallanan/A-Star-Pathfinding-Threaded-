@@ -93,8 +93,28 @@ void Renderer::drawFillRect(const Rect& rectangle, const Colour& colour) const
 	SDL_RenderFillRect(m_renderer, &rect);
 }
 
-void Renderer::drawFillCircle(Point2D centre, int radius, const Colour& colour) const
+void Renderer::drawAtom(Point2D centre, int radius, const Colour& colour) const
 {
+	int angle = 15;
+	int angleIncrement = 15;
+	int maxAngle = 360;
+
+	float x1 = centre.x + (radius * cos(0));
+	float y1 = centre.y + (radius * sin(0));
+	float x2, y2;
+
+	while (angle != maxAngle)
+	{
+		x2 = centre.x + (radius * cos(angle));
+		y2 = centre.y + (radius * sin(angle));
+
+		SDL_RenderDrawLine(m_renderer, x1, y1, x2, y2);
+
+		x1 = x2;
+		y1 = y2;
+
+		angle += angleIncrement;
+	}
 }
 
 void Renderer::present() const

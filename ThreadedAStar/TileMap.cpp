@@ -130,6 +130,19 @@ Tile* TileMap::getRandomTileOfType(TileTypes type)
 	return tile;
 }
 
+Tile* TileMap::getTile(int x, int y)
+{
+	if (x < 0 || x >= m_tiles.size() ||
+		y < 0 || y >= m_tiles[0].size())
+	{
+		return nullptr;
+	}
+	else
+	{
+		return &m_tiles[x][y];
+	}
+}
+
 
 
 bool TileMap::isWall(int mapX, int mapY)

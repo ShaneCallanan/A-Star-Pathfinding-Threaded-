@@ -34,7 +34,7 @@ public:
 	void clear(const Colour& colour) const;
 	void drawRect(const Rect& rectangle, const Colour& colour) const;
 	void drawFillRect(const Rect& rectangle, const Colour& colour) const;
-	void drawFillCircle(Point2D centre, int radius, const Colour& colour) const;
+	void drawAtom(Point2D centre, int radius, const Colour& colour) const;
 	void present() const;
 	SDL_Renderer* getRenderer() const;
 };

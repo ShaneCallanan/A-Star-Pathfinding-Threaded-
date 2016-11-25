@@ -28,7 +28,7 @@ void Player::update(unsigned int dt)
 
 void Player::render(Renderer* renderer) const
 {
-	renderer->drawFillCircle(m_centre, m_radius, m_colour);
+	renderer->drawAtom(m_centre, m_radius, m_colour);
 }
 
 
