@@ -1,11 +1,116 @@
-﻿  Game.cpp
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\documents\college work\game engineering ii\project_astar\threadedastar\threadedastar\game.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.exe
-  ThreadedAStar.vcxproj -> C:\Users\gameuser\Documents\COLLEGE WORK\Game Engineering II\Project_AStar\ThreadedAStar\Debug\ThreadedAStar.pdb (Partial PDB)
+﻿  TileMap.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(36): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(36): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(37): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(37): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(63): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(63): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(64): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(64): warning C4244: 'initializing': conversion from 'float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(79): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(79): warning C4244: 'initializing': conversion from 'const float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(80): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(80): warning C4244: 'initializing': conversion from 'const float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(135): warning C4018: '>=': signed/unsigned mismatch
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tilemap.cpp(136): warning C4018: '>=': signed/unsigned mismatch
+  Tile.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(68): warning C4244: 'return': conversion from 'const float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(73): warning C4244: 'return': conversion from 'const float' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(78): warning C4244: 'argument': conversion from 'const int' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(110): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(115): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\tile.cpp(120): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Renderer.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(52): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(96): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(97): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(102): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(103): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\renderer.cpp(105): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+  Player.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\player.cpp(10): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  PathGenerator.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.cpp(107): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.cpp(122): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.cpp(141): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.cpp(167): warning C4018: '<': signed/unsigned mismatch
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\priorityqueue.h(30): warning C4018: '<': signed/unsigned mismatch
+  c:\users\gameuser\desktop\gameengineeringii\threadedastar\priorityqueue.h(27): note: while compiling class template member function 'void PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>::insert(std::vector<_Ty,std::allocator<_Ty>> *)'
+          with
+          [
+              _Ty=Tile *
+          ]
+  c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.cpp(64): note: see reference to function template instantiation 'void PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>::insert(std::vector<_Ty,std::allocator<_Ty>> *)' being compiled
+          with
+          [
+              _Ty=Tile *
+          ]
+  c:\users\gameuser\desktop\gameengineeringii\threadedastar\pathgenerator.h(26): note: see reference to class template instantiation 'PriorityQueue<Tile *,std::vector<Tile *,std::allocator<_Ty>>,PathGenerator::CompareTiles>' being compiled
+          with
+          [
+              _Ty=Tile *
+          ]
+  NPC.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  main.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
+  LTimer.cpp
+  InputManager.cpp
+  Game.cpp
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii\threadedastar\game.cpp(11): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+Game.obj : error LNK2019: unresolved external symbol _SDL_GetTicks referenced in function "public: static unsigned int __cdecl LTimer::gameTime(void)" (?gameTime@LTimer@@SAIXZ)
+LTimer.obj : error LNK2001: unresolved external symbol _SDL_GetTicks
+InputManager.obj : error LNK2019: unresolved external symbol _SDL_PollEvent referenced in function "public: void __thiscall InputManager::ProcessInput(void)" (?ProcessInput@InputManager@@QAEXXZ)
+main.obj : error LNK2019: unresolved external symbol _SDL_Quit referenced in function _SDL_main
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_GetError referenced in function "public: bool __thiscall Renderer::initialize(void)" (?initialize@Renderer@@QAE_NXZ)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_CreateWindow referenced in function "private: bool __thiscall Renderer::initializeWindow(void)" (?initializeWindow@Renderer@@AAE_NXZ)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_CreateRenderer referenced in function "private: bool __thiscall Renderer::initializeRenderer(void)" (?initializeRenderer@Renderer@@AAE_NXZ)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderSetViewport referenced in function "private: bool __thiscall Renderer::initializeViewport(void)" (?initializeViewport@Renderer@@AAE_NXZ)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_SetRenderDrawColor referenced in function "public: void __thiscall Renderer::clear(class Colour const &)const " (?clear@Renderer@@QBEXABVColour@@@Z)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderClear referenced in function "public: void __thiscall Renderer::clear(class Colour const &)const " (?clear@Renderer@@QBEXABVColour@@@Z)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderDrawLine referenced in function "public: void __thiscall Renderer::drawAtom(class Point2D,int,class Colour const &)const " (?drawAtom@Renderer@@QBEXVPoint2D@@HABVColour@@@Z)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderDrawRect referenced in function "public: void __thiscall Renderer::drawRect(class Rect const &,class Colour const &)const " (?drawRect@Renderer@@QBEXABVRect@@ABVColour@@@Z)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderFillRect referenced in function "public: void __thiscall Renderer::drawFillRect(class Rect const &,class Colour const &)const " (?drawFillRect@Renderer@@QBEXABVRect@@ABVColour@@@Z)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_RenderPresent referenced in function "public: void __thiscall Renderer::present(void)const " (?present@Renderer@@QBEXXZ)
+Renderer.obj : error LNK2019: unresolved external symbol _SDL_Init referenced in function "private: bool __thiscall Renderer::initializeSDL(void)" (?initializeSDL@Renderer@@AAE_NXZ)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\gameuser\Desktop\GameEngineeringII\\SDL\\lib\x64\SDL2.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\Users\gameuser\Desktop\GameEngineeringII\\SDL\\lib\x64\SDL2main.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'X86'
+C:\Users\gameuser\Desktop\GameEngineeringII\Debug\ThreadedAStar.exe : fatal error LNK1120: 15 unresolved externals

@@ -86,10 +86,7 @@
     <ClInclude Include="InputManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PriorityQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="sorted_vector.h">
+    <ClInclude Include="ListTypes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #include "Tile.h"
+#include <limits>
 
 
 
@@ -9,6 +10,7 @@ Tile::Tile(TileTypes type, int mapPosX, int mapPosY) :
 	m_mapPosY(mapPosY),
 	m_type(type)
 {
+	m_costG = numeric_limits<int>::max();
 	m_traversable = type == TileTypes::WALL ? false : true;
 }
 
@@ -39,12 +41,6 @@ void Tile::update(unsigned int dt)
 {
 
 }
-
-
-//bool Tile::operator<(const Tile& right) const
-//{
-//
-//}
 
 
 
@@ -105,14 +101,9 @@ void Tile::reset()
 
 
 
-void Tile::setGCost()
+void Tile::setGCost(int cost)
 {
-	m_costG = m_parentNode->getGCost() + 1;
-}
-
-void Tile::setGCost(int value)
-{
-	m_costG = value;
+	m_costG = cost;
 }
 
 void Tile::setHCost(int value)

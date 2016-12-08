@@ -35,7 +35,8 @@ void Game::initialize()
 		/*unsigned int previousTime = LTimer::gameTime();
 		m_pathGenerator.generatePath(m_tileMap.getTile(0, 0), m_tileMap.getTile(999, 999));
 		unsigned int afterTime = LTimer::gameTime();
-		totalTime = afterTime - previousTime;*/
+		unsigned int totalTime = afterTime - previousTime;
+		cout << totalTime << " ticks" << endl;*/
 		m_pathGenerator.generatePath(m_tileMap.getRandomTileOfType(TileTypes::FLOOR), m_tileMap.getRandomTileOfType(TileTypes::FLOOR));
 	}
 }

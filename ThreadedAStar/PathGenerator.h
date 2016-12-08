@@ -1,18 +1,14 @@
 #pragma once
 
 #include "TileMap.h"
-#include "PriorityQueue.h"
-#include "sorted_vector.h"
-#include <list>
-
-
+#include "ListTypes.h"
 
 
 
 class PathGenerator
 {
 private:
-	struct CompareTiles
+	struct CompareNodes
 	{
 		bool operator() (Tile* lhs, Tile* rhs)
 		{
@@ -20,20 +16,23 @@ private:
 		}
 	};
 
-	vector<Tile*> m_closedList;
-	//sorted_vector<Tile*> m_openList;
-	//list<Tile*> m_openList;
-	PriorityQueue<Tile*, vector<Tile*>, CompareTiles> m_openList;
-	vector<Tile*> m_path;
 	TileMap* m_tileMap;
+	vector<vector<int>> m_listMap;													// map of tiles with integer value to determine what list it's in
+	vector<Tile*> m_openList;
+	vector<Tile*> m_path;
 
-	void removeNonTraversableNodes(vector<Tile*>* nodes);
-	void removeUsedNodes(vector<Tile*>* nodes);
-	int calculateHCost(Tile* currentNode, Tile* endNode);
-	void computeCosts(vector<Tile*>* nodes, Tile* endNode);
+	void removeUnnecessaryNodes(vector<Tile*>* nodes);
 	vector<Tile*> findAdjacentNodes(Tile* node);
+	void computeCosts(vector<Tile*>* nodes, Tile* current, Tile* end);
+	int calculateHCost(Tile* currentNode, Tile* endNode);
+	void addUniqueNodesToOpenList(vector<Tile*>* nodes);
 	void resetLists();
+	void setupListMap();
 	void setParentNodes(Tile* parentNode, vector<Tile*>* nodes);
+
+	void drawClosedNode(Tile* closedNode);
+	void drawPathNode(Tile* pathNode);
+	void drawStartEndNode(Tile* start, Tile* end);
 
 public:
 	PathGenerator();

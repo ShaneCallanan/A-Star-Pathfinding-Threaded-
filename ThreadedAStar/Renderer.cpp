@@ -36,12 +36,6 @@ bool Renderer::initialize()
 		return false;
 	}
 
-	/*if (!initializeViewport())
-	{
-		cout << "Could not initialize viewport: " << SDL_GetError() << endl;
-		return false;
-	}*/
-
 	return true;
 }
 

@@ -29,6 +29,7 @@ public:
 	void render(Renderer* renderer) const;
 	Tile* getRandomTile();
 	Tile* getRandomTileOfType(TileTypes type);
+	Size2D getSize();
 	Tile* getTile(int x, int y);
 	bool isWall(int mapX, int mapY);
 };

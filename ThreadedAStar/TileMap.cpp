@@ -130,6 +130,11 @@ Tile* TileMap::getRandomTileOfType(TileTypes type)
 	return tile;
 }
 
+Size2D TileMap::getSize()
+{
+	return m_size;
+}
+
 Tile* TileMap::getTile(int x, int y)
 {
 	if (x < 0 || x >= m_tiles.size() ||

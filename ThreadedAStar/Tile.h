@@ -34,7 +34,6 @@ public:
 	const Rect* getRectangle() const;
 	const TileTypes getType() const;
 	void reset();
-	void setGCost();
 	void setGCost(int value);
 	void setHCost(int value);
 	void setParentNode(Tile* parentNode);
