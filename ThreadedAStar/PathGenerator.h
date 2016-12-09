@@ -12,7 +12,10 @@ private:
 	{
 		bool operator() (Tile* lhs, Tile* rhs)
 		{
-			return rhs->getFCost() < lhs->getFCost();
+			int leftF = lhs->getFCost();
+			int rightF = rhs->getFCost();
+			
+			return leftF > rightF;
 		}
 	};
 

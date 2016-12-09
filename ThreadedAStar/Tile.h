@@ -29,6 +29,7 @@ public:
 	void calculateFCost();
 	const int getFCost() const;
 	const int getGCost() const;
+	const int getHCost() const;
 	const Point2D getMapPos() const;
 	Tile* getParentNode();
 	const Rect* getRectangle() const;

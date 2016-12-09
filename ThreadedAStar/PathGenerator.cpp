@@ -20,7 +20,22 @@ vector<Tile*> PathGenerator::generatePath(Tile* startNode, Tile* endNode)
 
 	while (!m_openList.empty())
 	{
-		currentNode = m_openList[m_openList.size() - 1];
+		/*int index = 0;
+		currentNode = m_openList[0];
+		int size = m_openList.size();
+
+		for (int i = size - 1; i >= 0; i--)
+		{
+			if (m_openList[i]->getFCost() < currentNode->getFCost())
+			{
+				currentNode = m_openList[i];
+				index = i;
+			}
+		}
+
+		m_openList.erase(m_openList.begin() + index);*/
+
+		currentNode = m_openList.back();
 		m_openList.pop_back();
 		Point2D currentPos = currentNode->getMapPos();
 		m_listMap[currentPos.x][currentPos.y] = LIST_TYPES::CLOSED;
@@ -145,10 +160,10 @@ void PathGenerator::addUniqueNodesToOpenList(vector<Tile*>* nodes)
 		}
 	}
 
-	if (elementsAdded > 0)
-	{
+	/*if (elementsAdded > 0)
+	{*/
 		sort(m_openList.begin(), m_openList.end(), CompareNodes());
-	}
+	//}
 }
 
 

@@ -69,6 +69,11 @@ const int Tile::getGCost() const
 	return m_costG;
 }
 
+const int Tile::getHCost() const
+{
+	return m_costH;
+}
+
 const Point2D Tile::getMapPos() const
 {
 	return Point2D(m_mapPosX, m_mapPosY);

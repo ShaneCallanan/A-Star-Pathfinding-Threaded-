@@ -11,8 +11,6 @@ Game::Game() :
 	srand(time(NULL));
 	m_renderer = Renderer(m_settings.windowSize, "Astar");
 	m_tileMap = TileMap(m_settings.mapSize);
-
-	cout << "WORKING!" << endl;
 }
 
 Game::~Game() { }
@@ -32,12 +30,12 @@ void Game::initialize()
 		m_tileMap.initializeTiles(m_settings.windowSize);
 		m_pathGenerator.setTileMap(&m_tileMap);
 		initializeNPCs();
-		/*unsigned int previousTime = LTimer::gameTime();
+		/*unsigned int previousTime = LTimer::gameTime();*/
 		m_pathGenerator.generatePath(m_tileMap.getTile(0, 0), m_tileMap.getTile(999, 999));
-		unsigned int afterTime = LTimer::gameTime();
+		/*unsigned int afterTime = LTimer::gameTime();
 		unsigned int totalTime = afterTime - previousTime;
 		cout << totalTime << " ticks" << endl;*/
-		m_pathGenerator.generatePath(m_tileMap.getRandomTileOfType(TileTypes::FLOOR), m_tileMap.getRandomTileOfType(TileTypes::FLOOR));
+		//m_pathGenerator.generatePath(m_tileMap.getRandomTileOfType(TileTypes::FLOOR), m_tileMap.getRandomTileOfType(TileTypes::FLOOR));
 	}
 }
 
