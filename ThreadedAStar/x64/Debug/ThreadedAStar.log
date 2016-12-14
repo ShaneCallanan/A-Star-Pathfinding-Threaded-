@@ -9,7 +9,10 @@ c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesetting
 c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(80): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(80): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(112): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(112): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(110): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(110): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII - Copy (2)\x64\Debug\ThreadedAStar.exe
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII - Copy (2)\x64\Debug\ThreadedAStar.pdb (Partial PDB)

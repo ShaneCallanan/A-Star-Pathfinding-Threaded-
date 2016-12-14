@@ -24,7 +24,7 @@ public:
 	void initializeColour();
 	void update(unsigned int dt);
 	void render(Renderer* renderer) const;
-	const Point2D getMapPos() const;
+	Point2D getMapPos();
 	const Rect* getRectangle() const;
 	const TileTypes getType() const;
 	void setRectangle(Rect rectangle);

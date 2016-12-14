@@ -52,9 +52,14 @@ void Tile::render(Renderer* renderer) const
 
 
 
-const Point2D Tile::getMapPos() const
+Point2D Tile::getMapPos()
 {
-	return Point2D(m_mapPosX, m_mapPosY);
+	SDL_LockMutex(m_mapPosAccess);
+	int mapPosX = m_mapPosX;
+	int mapPosY = m_mapPosY;
+	SDL_UnlockMutex(m_mapPosAccess);
+
+	return Point2D(mapPosX, mapPosY);
 }
 
 const Rect* Tile::getRectangle() const

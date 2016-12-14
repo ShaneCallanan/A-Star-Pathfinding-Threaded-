@@ -40,8 +40,8 @@ struct GameSettings3
 	const Rect playerZoneAsPercentage = Rect(0.075f, 0.32, 0.314f, 0.33f);
 	const Size2D windowSize = Size2D(2000, 2000);
 
-	const Rect wallsAsPercentage[18] = { Rect(0.05f, 0, 0.01f, 0.8f),
-										Rect(0.1f, 0.2f, 0.01f, 0.8f),
+	const Rect wallsAsPercentage[1] = { Rect(0.05f, 0, 0.01f, 0.8f),
+										/*Rect(0.1f, 0.2f, 0.01f, 0.8f),
 										Rect(0.15f, 0, 0.01f, 0.8f),
 										Rect(0.2f, 0.2f, 0.01f, 0.8f),
 										Rect(0.25f, 0, 0.01f, 0.8f),
@@ -57,5 +57,5 @@ struct GameSettings3
 										Rect(0.75f, 0, 0.01f, 0.8f),
 										Rect(0.8f, 0.2f, 0.01f, 0.8f),
 										Rect(0.85f, 0, 0.01f, 0.8f),
-										Rect(0.9f, 0.2f, 0.01f, 0.8f) };
+										Rect(0.9f, 0.2f, 0.01f, 0.8f)*/ };
 };

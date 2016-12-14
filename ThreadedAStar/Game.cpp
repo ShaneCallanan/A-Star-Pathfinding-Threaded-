@@ -30,9 +30,9 @@ void Game::initialize()
 		m_player = Player(m_tileMap.getRandomTileOfType(TileTypes::PLAYERZONE));
 		initializeNPCs();
 
-		Tile* startTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
+		/*Tile* startTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
 		Tile* endTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
-		m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, &m_NPCs[0], startTile, endTile));
+		m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, &m_NPCs[0], startTile, endTile));*/
 	}
 }
 
@@ -82,8 +82,6 @@ void Game::updateNPCs(unsigned int dt)
 	for (int i = 0; i < npcCount; i++)
 	{
 		NPC* npc = &m_NPCs[i];
-		/*bool calculatingPath = npc->isCalculatingPath();
-		bool aligned = npc->isAligned();
 
 		if (!npc->isCalculatingPath() && npc->isAligned())
 		{
@@ -91,7 +89,7 @@ void Game::updateNPCs(unsigned int dt)
 			Tile* endTile = m_player.getTile();
 			m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, npc, startTile, endTile));
 			npc->setCalculatingPath(true);
-		}*/
+		}
 		
 		npc->update(dt);
 	}

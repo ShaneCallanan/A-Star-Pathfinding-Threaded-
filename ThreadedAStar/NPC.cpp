@@ -5,6 +5,7 @@ NPC::NPC() {}
 
 NPC::NPC(Tile* tile) :
 	Player(tile),
+	m_currentTile(tile),
 	m_calculatingPath(false),
 	m_aligned(true)
 {
