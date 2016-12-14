@@ -3,7 +3,7 @@
 
 Worker::Worker()
 {
-	m_thread = SDL_CreateThread(work, "Worker", (void*)NULL);
+	m_thread = SDL_CreateThread(&work, "Worker", (void*)NULL);
 }
 
 int Worker::work(void* ptr)

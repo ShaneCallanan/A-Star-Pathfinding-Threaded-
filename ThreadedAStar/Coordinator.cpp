@@ -1,7 +1,17 @@
 #include "Coordinator.h"
+#include <iostream>
 
-Coordinator* Coordinator::m_instance = nullptr;
+Coordinator* Coordinator::m_instance = 0;
 Coordinator::Coordinator() 
+{
+	m_jobAccess = SDL_CreateMutex();
+	m_jobAvailable = SDL_CreateSemaphore(0);
+	m_mutex = SDL_CreateMutex();
+}
+
+
+
+void Coordinator::initializeWorkers()
 {
 	int numWorkers = thread::hardware_concurrency() - 1;
 
@@ -9,9 +19,6 @@ Coordinator::Coordinator()
 	{
 		m_workers.push_back(new Worker());
 	}
-
-	m_jobAccess = SDL_CreateMutex();
-	m_jobAvailable = SDL_CreateSemaphore(0);
 }
 
 
@@ -39,4 +46,12 @@ Job Coordinator::getNextJob()
 SDL_sem* Coordinator::getJobAvailable() const
 {
 	return m_jobAvailable;
+}
+
+
+void Coordinator::modifyNumWorking(int val)
+{
+	SDL_LockMutex(m_mutex);
+	numWorking += val;
+	SDL_UnlockMutex(m_mutex);
 }

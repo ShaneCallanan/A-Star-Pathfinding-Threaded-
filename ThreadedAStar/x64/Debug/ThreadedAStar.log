@@ -1,18 +1,18 @@
-﻿  Game.cpp
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(52): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(53): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(54): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(55): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(11): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(25): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(39): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(79): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(79): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
+﻿  PathGenerator.cpp
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(67): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(68): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(69): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(70): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(21): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(38): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(44): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(61): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(71): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(79): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(94): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(99): warning C4244: 'argument': conversion from 'float' to 'unsigned __int64', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(135): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(136): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\pathgenerator.cpp(170): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII - Copy (2)\x64\Debug\ThreadedAStar.exe
   ThreadedAStar.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII - Copy (2)\x64\Debug\ThreadedAStar.pdb (Partial PDB)

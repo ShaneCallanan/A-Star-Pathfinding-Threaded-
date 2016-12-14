@@ -10,10 +10,25 @@ class Point2D {
 public:
 	float x, y;
 	Point2D(float _x = 0, float _y = 0) :x(_x), y(_y) { };
-	float length() { return (float)sqrt(x*x + y*y); };
 
+	Point2D operator-(Point2D rhs)
+	{
+		return Point2D(x - rhs.x, y - rhs.y);
+	}
 };
 
+class Vector2D {
+public:
+	float x, y;
+	Vector2D(float _x = 0, float _y = 0) :x(_x), y(_y) { };
+	Vector2D(Point2D _point) :x(_point.x), y(_point.y) { };
+	float length() { return (float)sqrt(x*x + y*y); };
+	
+	Vector2D operator*(float rhs) 
+	{
+		return Vector2D(x * rhs, y * rhs);
+	};
+};
 
 class Size2D {
 public:

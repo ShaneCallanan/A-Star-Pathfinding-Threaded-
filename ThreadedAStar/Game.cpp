@@ -11,6 +11,7 @@ Game::Game() :
 	m_renderer = Renderer(m_settings.windowSize, "Astar");
 	m_tileMap = TileMap(m_settings.mapSize);
 	m_coordinator = Coordinator::getInstance();
+	m_coordinator->initializeWorkers();
 }
 
 Game::~Game() { }

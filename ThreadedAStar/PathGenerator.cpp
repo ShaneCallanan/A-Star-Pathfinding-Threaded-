@@ -113,7 +113,7 @@ void PathGenerator::generatePath(NPC* npc, Tile* startNode, Tile* endNode)
 	}
 
 	npc->setPath(path);
-	npc->setCalculatingPath(false);
+	//npc->setCalculatingPath(false);
 }
 
 

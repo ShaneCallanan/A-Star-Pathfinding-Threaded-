@@ -18,16 +18,20 @@ private:
 	SDL_mutex* m_jobAccess;
 	SDL_sem* m_jobAvailable;
 	deque<Worker*> m_workers;
+	SDL_mutex* m_mutex;
+	int numWorking = 0;
 
 public:
 	Coordinator();
+	void initializeWorkers();
 	void addJob(Job job);
 	Job getNextJob();
 	SDL_sem* getJobAvailable() const;
+	void modifyNumWorking(int val);
 
 	static Coordinator* getInstance()
 	{
-		if (m_instance == nullptr)
+		if (!m_instance)
 		{
 			m_instance = new Coordinator();
 		}
