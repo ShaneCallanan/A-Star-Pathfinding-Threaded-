@@ -1,16 +1,16 @@
 ﻿  Game.cpp
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(47): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(48): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(49): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(50): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(12): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(26): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(40): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(52): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(53): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(54): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\basictypes.h(55): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(11): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(25): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\gamesettings.h(39): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(80): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(80): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(110): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(110): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(79): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(79): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\gameuser\desktop\gameengineeringii - copy (2)\threadedastar\game.cpp(109): warning C4267: 'initializing': conversion from 'size_t' to 'const int', possible loss of data
   Generating Code...
   Skipping... (no relevant changes detected)
   main.cpp

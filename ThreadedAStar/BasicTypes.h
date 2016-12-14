@@ -40,6 +40,11 @@ public:
 		return (x >= pos.x && x < pos.x + size.w) 
 			&& (y >= pos.y && y < pos.y + size.h);
 	};
+
+	bool contains(float x)
+	{
+		return (x >= pos.x && x < pos.x + size.w);
+	}
 	
 	SDL_Rect getSDLRect() const 
 	{ 

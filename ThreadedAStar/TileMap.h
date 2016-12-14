@@ -23,7 +23,7 @@ public:
 	TileMap();
 	TileMap(Size2D size);
 	void initializeZones(Rect playerZone, Rect npcZone);
-	void initializeWalls(const Rect walls[]);
+	void initializeWalls(pair<int, int> wallCount, Size2D wallSize);
 	void initializeTiles(Size2D windowSize);
 	void update(unsigned int dt);
 	void render(Renderer* renderer) const;
@@ -32,4 +32,5 @@ public:
 	Size2D getSize();
 	Tile* getTile(int x, int y);
 	bool isWall(int mapX, int mapY);
+	bool intersectsWithWall(float x);
 };

@@ -23,16 +23,15 @@ void Game::initialize()
 
 	if (m_running)
 	{
+		pair<int, int> wallCount = make_pair(m_settings.numWalls, m_settings.numWallsTouchingBorder);
+		Size2D wallSize = Size2D(m_settings.wallWidth, m_settings.wallHeight);
+
 		m_tileMap.initializeZones(m_settings.playerZoneAsPercentage, m_settings.npcZoneAsPercentage);
-		m_tileMap.initializeWalls(m_settings.wallsAsPercentage);
+		m_tileMap.initializeWalls(wallCount, wallSize);
 		m_tileMap.initializeTiles(m_settings.windowSize);
 		m_pathGenerator.setTileMap(&m_tileMap);
 		m_player = Player(m_tileMap.getRandomTileOfType(TileTypes::PLAYERZONE));
 		initializeNPCs();
-
-		/*Tile* startTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
-		Tile* endTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
-		m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, &m_NPCs[0], startTile, endTile));*/
 	}
 }
 
