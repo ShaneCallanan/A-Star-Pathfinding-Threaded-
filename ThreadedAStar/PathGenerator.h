@@ -2,36 +2,30 @@
 
 #include "TileMap.h"
 #include "ListTypes.h"
+#include "NPC.h"
 
 
 
 class PathGenerator
 {
 private:
-	struct CompareNodes
+	struct NodeInfo
 	{
-		bool operator() (Tile* lhs, Tile* rhs)
-		{
-			int leftF = lhs->getFCost();
-			int rightF = rhs->getFCost();
-			
-			return leftF > rightF;
-		}
+		int G = numeric_limits<int>::max();
+		int H = numeric_limits<int>::max();
+		int F = numeric_limits<int>::max();
+		int listType = LIST_TYPES::NONE;
+		Tile* parent = nullptr;
 	};
 
 	TileMap* m_tileMap;
-	vector<vector<int>> m_listMap;													// map of tiles with integer value to determine what list it's in
-	vector<Tile*> m_openList;
-	vector<Tile*> m_path;
 
-	void removeUnnecessaryNodes(vector<Tile*>* nodes);
-	vector<Tile*> findAdjacentNodes(Tile* node);
-	void computeCosts(vector<Tile*>* nodes, Tile* current, Tile* end);
-	int calculateHCost(Tile* currentNode, Tile* endNode);
-	void addUniqueNodesToOpenList(vector<Tile*>* nodes);
-	void resetLists();
-	void setupListMap();
-	void setParentNodes(Tile* parentNode, vector<Tile*>* nodes);
+	vector<Tile*> findValidNeighbours(Tile* node, vector<vector<NodeInfo>>* nodeData);
+	int calculateHeuristic(Tile* currentNode, Tile* endNode);
+	void initializeNodeData(vector<vector<NodeInfo>>* nodeData);
+	bool isValidNode(Tile* node, NodeInfo* nodeData);
+	bool isDiagonal(int xDiff, int yDiff);
+	bool isInMapBounds(int x, int y);
 
 	void drawClosedNode(Tile* closedNode);
 	void drawPathNode(Tile* pathNode);
@@ -39,6 +33,6 @@ private:
 
 public:
 	PathGenerator();
-	vector<Tile*> generatePath(Tile* start, Tile* end);
+	void generatePath(NPC* npc, Tile* start, Tile* end);
 	void setTileMap(TileMap* tileMap);	
 };

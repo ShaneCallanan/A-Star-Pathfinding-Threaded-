@@ -5,12 +5,12 @@
 
 Game::Game() :
 	m_pathGenerator(PathGenerator()),
-	m_player(Player()),
 	m_running(true)
 { 
 	srand(time(NULL));
 	m_renderer = Renderer(m_settings.windowSize, "Astar");
 	m_tileMap = TileMap(m_settings.mapSize);
+	m_coordinator = Coordinator::getInstance();
 }
 
 Game::~Game() { }
@@ -19,9 +19,7 @@ Game::~Game() { }
 
 void Game::initialize()
 {
-	m_prevTime = LTimer::gameTime();
 	m_running = m_renderer.initialize();
-	//unsigned int totalTime;
 
 	if (m_running)
 	{
@@ -29,13 +27,12 @@ void Game::initialize()
 		m_tileMap.initializeWalls(m_settings.wallsAsPercentage);
 		m_tileMap.initializeTiles(m_settings.windowSize);
 		m_pathGenerator.setTileMap(&m_tileMap);
+		m_player = Player(m_tileMap.getRandomTileOfType(TileTypes::PLAYERZONE));
 		initializeNPCs();
-		/*unsigned int previousTime = LTimer::gameTime();*/
-		m_pathGenerator.generatePath(m_tileMap.getTile(0, 0), m_tileMap.getTile(999, 999));
-		/*unsigned int afterTime = LTimer::gameTime();
-		unsigned int totalTime = afterTime - previousTime;
-		cout << totalTime << " ticks" << endl;*/
-		//m_pathGenerator.generatePath(m_tileMap.getRandomTileOfType(TileTypes::FLOOR), m_tileMap.getRandomTileOfType(TileTypes::FLOOR));
+
+		Tile* startTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
+		Tile* endTile = m_tileMap.getRandomTileOfType(TileTypes::FLOOR);
+		m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, &m_NPCs[0], startTile, endTile));
 	}
 }
 
@@ -84,7 +81,19 @@ void Game::updateNPCs(unsigned int dt)
 
 	for (int i = 0; i < npcCount; i++)
 	{
-		m_NPCs[i].update(dt);
+		NPC* npc = &m_NPCs[i];
+		/*bool calculatingPath = npc->isCalculatingPath();
+		bool aligned = npc->isAligned();
+
+		if (!npc->isCalculatingPath() && npc->isAligned())
+		{
+			Tile* startTile = npc->getTile();
+			Tile* endTile = m_player.getTile();
+			m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, npc, startTile, endTile));
+			npc->setCalculatingPath(true);
+		}*/
+		
+		npc->update(dt);
 	}
 }
 

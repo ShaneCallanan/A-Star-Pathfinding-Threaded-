@@ -5,7 +5,8 @@
 Player::Player() {}
 
 Player::Player(Tile* tile) :
-	m_currentTile(tile)
+	m_currentTile(tile),
+	m_aligned(true)
 {
 	m_radius = tile->getRectangle()->size.w / 2;
 	m_centre = tile->getRectangle()->getCentre();
@@ -33,7 +34,21 @@ void Player::render(Renderer* renderer) const
 
 
 
+Tile* Player::getTile()
+{
+	return m_currentTile;
+}
+
+
+
 void Player::setCurrentTile(Tile* tile)
 {
 	m_currentTile = tile;
+}
+
+
+
+bool Player::isAligned()
+{
+	return m_aligned;
 }

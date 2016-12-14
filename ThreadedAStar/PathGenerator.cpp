@@ -7,133 +7,162 @@ PathGenerator::PathGenerator() { }
 
 
 
-vector<Tile*> PathGenerator::generatePath(Tile* startNode, Tile* endNode)
+
+
+void PathGenerator::generatePath(NPC* npc, Tile* startNode, Tile* endNode)
 {
-	resetLists();
+	vector<Tile*> openList;
+	vector<Tile*> path;
 
-	startNode->setGCost(0);
-	startNode->setHCost(calculateHCost(startNode, endNode));
-	startNode->calculateFCost();
+	vector<vector<NodeInfo>> nodeData;													// map of node information
+	initializeNodeData(&nodeData);
 
-	m_openList.push_back(startNode);
-	Tile* currentNode;
+	Point2D startNodePos = startNode->getMapPos();
+	NodeInfo* startNodeInfo = &nodeData.at(startNodePos.x).at(startNodePos.y);
+	startNodeInfo->G = 0;
+	startNodeInfo->H = calculateHeuristic(startNode, endNode);
+	startNodeInfo->F = startNodeInfo->G + startNodeInfo->H;
 
-	while (!m_openList.empty())
+	openList.push_back(startNode);
+
+
+	while (!openList.empty())
 	{
-		/*int index = 0;
-		currentNode = m_openList[0];
-		int size = m_openList.size();
+		Tile* currentNode = openList.back();
 
-		for (int i = size - 1; i >= 0; i--)
+		if (openList.size() == 12)
 		{
-			if (m_openList[i]->getFCost() < currentNode->getFCost())
+			for (int i = 0; i < openList.size() - 1; i++)
 			{
-				currentNode = m_openList[i];
-				index = i;
+				Point2D pos = openList[i]->getMapPos();
+				cout << nodeData.at(pos.x).at(pos.y).F << endl;
 			}
+			cout << endl << endl;
 		}
+		
+		Point2D currentNodePos = currentNode->getMapPos();
+		NodeInfo* currentNodeInfo = &nodeData[currentNodePos.x][currentNodePos.y];
+		currentNodeInfo->listType = LIST_TYPES::CLOSED;
+		openList.pop_back();
 
-		m_openList.erase(m_openList.begin() + index);*/
+		//drawClosedNode(currentNode);
 
-		currentNode = m_openList.back();
-		m_openList.pop_back();
-		Point2D currentPos = currentNode->getMapPos();
-		m_listMap[currentPos.x][currentPos.y] = LIST_TYPES::CLOSED;
-		drawClosedNode(currentNode);
 
-		// If destination node found
+
 		if (currentNode == endNode)
 		{
-			while (currentNode->getParentNode() != nullptr)
+			// CREATE PATH
+			while (currentNodeInfo->parent != nullptr)
 			{
-				m_path.push_back(currentNode);
+				path.push_back(currentNode);
 				drawPathNode(currentNode);
-				currentNode = currentNode->getParentNode();
+				currentNode = currentNodeInfo->parent;
+				currentNodePos = currentNode->getMapPos();
+				currentNodeInfo = &nodeData[currentNodePos.x][currentNodePos.y];
 			}
 
 			drawStartEndNode(startNode, endNode);
-			return m_path;
+			break;
 		}
 		else
 		{
-			vector<Tile*> adjacentNodes = findAdjacentNodes(currentNode);
-			removeUnnecessaryNodes(&adjacentNodes);
-			computeCosts(&adjacentNodes, currentNode, endNode);
-			addUniqueNodesToOpenList(&adjacentNodes);
+			// CALCULATE A-STAR
+			vector<Tile*> neighbours = findValidNeighbours(currentNode, &nodeData);
+			int neighbourCount = neighbours.size();
+			int newGCost = currentNodeInfo->G + 1;
+
+			// Update info for neighbouring nodes
+			for (int i = 0; i < neighbourCount; i++)
+			{
+				Tile* neighbour = neighbours[i];
+				Point2D neighbourPos = neighbour->getMapPos();
+				NodeInfo* neighbourInfo = &nodeData[neighbourPos.x][neighbourPos.y];
+
+				// Update info for neighbouring node
+				if (newGCost < neighbourInfo->G)
+				{
+					neighbourInfo->G = newGCost;
+					neighbourInfo->H = calculateHeuristic(currentNode, endNode);
+					neighbourInfo->F = neighbourInfo->G + neighbourInfo->H;
+					neighbourInfo->parent = currentNode;
+				}
+
+				// Add neighbouring node to open list
+				if (neighbourInfo->listType != LIST_TYPES::OPEN)
+				{
+					// Sorted insertion
+					int insertionIndex = openList.size() - 1;
+
+					for (insertionIndex; insertionIndex >= 0; insertionIndex--)
+					{
+						Point2D elementPos = openList[insertionIndex]->getMapPos();
+						NodeInfo* elementInfo = &nodeData[elementPos.x][elementPos.y];
+
+						if (elementInfo->F >= neighbourInfo->F)
+						{
+							break;
+						}
+					}
+
+					if (insertionIndex < 0) { insertionIndex = 0;  }
+					openList.insert(openList.begin() + insertionIndex, neighbour);
+					neighbourInfo->listType = LIST_TYPES::OPEN;
+				}
+			}
 		}
 	}
 
-	return m_path;
+	npc->setPath(path);
+	npc->setCalculatingPath(false);
 }
 
 
 
-vector<Tile*> PathGenerator::findAdjacentNodes(Tile* node)
+vector<Tile*> PathGenerator::findValidNeighbours(Tile* node, vector<vector<NodeInfo>>* nodeData)
 {
-	Tile* adjacentNode;
-	vector<Tile*> nodes;
-	Point2D mapPos = node->getMapPos();
+	Tile* neighbour;
+	NodeInfo* nodeInfo;
+	vector<Tile*> validNeighbours;
+	Point2D nodePos = node->getMapPos();
 
 	// Loop surrounding nodes
 	for (int x = -1; x <= 1; x++)
 	{
 		for (int y = -1; y <= 1; y++)
 		{
-			// If not a diagonal node
-			if ((x == 0 && y != 0) || (y == 0 && x != 0))
+			if (!isDiagonal(x, y) && !(x == 0 && y == 0))
 			{
-				adjacentNode = m_tileMap->getTile(mapPos.x + x, mapPos.y + y);
+				int neighbourX = nodePos.x + x;
+				int neighbourY = nodePos.y + y;
 
-				if (adjacentNode != nullptr)
+				if (isInMapBounds(neighbourX, neighbourY))
 				{
-					nodes.push_back(adjacentNode);
+					neighbour = m_tileMap->getTile(neighbourX, neighbourY);
+					nodeInfo = &nodeData->at(neighbourX).at(neighbourY);
+
+					if (isValidNode(neighbour, nodeInfo))
+					{
+						validNeighbours.push_back(neighbour);
+					}
 				}
 			}
 		}
 	}
 
-	return nodes;
+	return validNeighbours;
 }
 
 
 
-void PathGenerator::removeUnnecessaryNodes(vector<Tile*>* nodes)
+bool PathGenerator::isInMapBounds(int x, int y)
 {
-	for (int i = nodes->size() - 1; i >= 0; i--)
-	{
-		Tile* node = nodes->at(i);
-		Point2D nodePos = node->getMapPos();
-
-		if (node->isTraversable() == false || 
-			m_listMap[nodePos.x][nodePos.y] == LIST_TYPES::CLOSED)
-		{
-			nodes->erase(nodes->begin() + i);
-		}
-	}
+	Size2D mapSize = m_tileMap->getSize();
+	return (x >= 0 && x < mapSize.w) && (y >= 0 && y < mapSize.h);
 }
 
 
 
-void PathGenerator::computeCosts(vector<Tile*>* nodes, Tile* current, Tile* end)
-{
-	int newG = current->getGCost() + 1;
-
-	for (int i = 0; i < nodes->size(); i++)
-	{
-		Tile* node = nodes->at(i);
-		unsigned int nodeGCost = node->getGCost();
-
-		if (newG < nodeGCost)
-		{
-			node->setGCost(newG);
-			node->setHCost(calculateHCost(node, end));
-			node->calculateFCost();
-			node->setParentNode(current);
-		}
-	}
-}
-
-int PathGenerator::calculateHCost(Tile* currentNode, Tile* endNode)
+int PathGenerator::calculateHeuristic(Tile* currentNode, Tile* endNode)
 {
 	Point2D currentPos = currentNode->getMapPos();
 	Point2D endPos = endNode->getMapPos();
@@ -143,69 +172,38 @@ int PathGenerator::calculateHCost(Tile* currentNode, Tile* endNode)
 
 
 
-void PathGenerator::addUniqueNodesToOpenList(vector<Tile*>* nodes)
-{
-	int elementsAdded = 0;
-
-	for (int i = 0; i < nodes->size(); i++)
-	{
-		Tile* node = nodes->at(i);
-		Point2D nodePos = node->getMapPos();
-
-		if (m_listMap[nodePos.x][nodePos.y] != LIST_TYPES::OPEN)
-		{
-			elementsAdded++;
-			m_openList.push_back(node);
-			m_listMap[nodePos.x][nodePos.y] = LIST_TYPES::OPEN;
-		}
-	}
-
-	/*if (elementsAdded > 0)
-	{*/
-		sort(m_openList.begin(), m_openList.end(), CompareNodes());
-	//}
-}
-
-
-
-void PathGenerator::resetLists()
-{
-	m_listMap.erase(m_listMap.begin(), m_listMap.end());
-	m_path.erase(m_path.begin(), m_path.end());
-	m_openList.erase(m_openList.begin(), m_openList.end());
-	setupListMap();
-}
-
-
-
-void PathGenerator::setupListMap()
+void PathGenerator::initializeNodeData(vector<vector<NodeInfo>>* nodeData)
 {
 	Size2D tileMapSize = m_tileMap->getSize();
 
 	for (int i = 0; i < tileMapSize.w; i++)
 	{
-		m_listMap.push_back(vector<int>());
+		nodeData->push_back(vector<NodeInfo>());
 
 		for (int j = 0; j < tileMapSize.h; j++)
 		{
-			m_listMap[i].push_back(LIST_TYPES::NONE);
+			nodeData->at(i).push_back(NodeInfo());
 		}
 	}
 }
 
 
 
-void PathGenerator::setParentNodes(Tile* parentNode, vector<Tile*>* nodes)
-{
-	for (int i = 0; i < nodes->size(); i++)
-	{
-		nodes->at(i)->setParentNode(parentNode);
-	}
-}
-
 void PathGenerator::setTileMap(TileMap* tileMap)
 {
 	m_tileMap = tileMap;
+}
+
+
+
+bool PathGenerator::isDiagonal(int xDiff, int yDiff)
+{
+	return xDiff != 0 && yDiff != 0;
+}
+
+bool PathGenerator::isValidNode(Tile* node, NodeInfo* nodeInfo)
+{
+	return node->isTraversable() && nodeInfo->listType != LIST_TYPES::CLOSED;
 }
 
 

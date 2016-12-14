@@ -6,19 +6,23 @@
 #include "NPC.h"
 #include "PathGenerator.h"
 #include "TileMap.h"
+#include "Coordinator.h"
 #include <vector>
+
+
 
 
 class Game
 {
 private:
+	Coordinator* m_coordinator;
 	vector<NPC> m_NPCs;
 	PathGenerator m_pathGenerator;
 	Player m_player;
 	unsigned int m_prevTime;
 	Renderer m_renderer;
 	bool m_running;
-	GameSettings2 m_settings;
+	GameSettings1 m_settings;
 	TileMap m_tileMap;
 
 	void initializeNPCs();

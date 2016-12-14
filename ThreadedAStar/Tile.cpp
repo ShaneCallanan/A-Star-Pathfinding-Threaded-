@@ -10,7 +10,7 @@ Tile::Tile(TileTypes type, int mapPosX, int mapPosY) :
 	m_mapPosY(mapPosY),
 	m_type(type)
 {
-	m_costG = numeric_limits<int>::max();
+	m_mapPosAccess = SDL_CreateMutex();
 	m_traversable = type == TileTypes::WALL ? false : true;
 }
 
@@ -52,36 +52,9 @@ void Tile::render(Renderer* renderer) const
 
 
 
-void Tile::calculateFCost()
-{
-	m_costF = m_costG + m_costH;
-}
-
-
-
-const int Tile::getFCost() const
-{
-	return m_costF;
-}
-
-const int Tile::getGCost() const
-{
-	return m_costG;
-}
-
-const int Tile::getHCost() const
-{
-	return m_costH;
-}
-
 const Point2D Tile::getMapPos() const
 {
 	return Point2D(m_mapPosX, m_mapPosY);
-}
-
-Tile* Tile::getParentNode()
-{
-	return m_parentNode;
 }
 
 const Rect* Tile::getRectangle() const
@@ -95,31 +68,6 @@ const TileTypes Tile::getType() const
 }
 
 
-
-void Tile::reset()
-{
-	m_costF = 0;
-	m_costG = 0;
-	m_costH = 0;
-	m_parentNode = nullptr;
-}
-
-
-
-void Tile::setGCost(int cost)
-{
-	m_costG = cost;
-}
-
-void Tile::setHCost(int value)
-{
-	m_costH = value;
-}
-
-void Tile::setParentNode(Tile* parentNode)
-{
-	m_parentNode = parentNode;
-}
 
 void Tile::setRectangle(Rect rectangle)
 {
