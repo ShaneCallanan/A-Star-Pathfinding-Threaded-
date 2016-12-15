@@ -82,6 +82,11 @@ void TileMap::initializeTiles(Size2D windowSize)
 	}
 }
 
+void TileMap::initializeWaypoints(int numWaypoints)
+{
+
+}
+
 
 
 void TileMap::update(unsigned int dt)

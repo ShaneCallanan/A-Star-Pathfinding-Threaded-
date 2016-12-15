@@ -17,13 +17,13 @@ protected:
 	float m_speed;
 	Tile* m_targetTile;
 
-	virtual void initializeColour();
 
 public:
 	Player();
 	Player(Tile* tile);
 	virtual void update(unsigned int dt);
 	void render(Renderer* renderer) const;
+	virtual void initializeColour();
 	void calculateDirection();
 	void checkAligned();
 	Tile* getTile();

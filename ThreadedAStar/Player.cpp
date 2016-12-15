@@ -13,7 +13,6 @@ Player::Player(Tile* tile) :
 	m_centre = tile->getRectangle()->getCentre();
 	//m_position = m_currentTile->getRectangle()->pos;
 	m_size = m_currentTile->getRectangle()->size;
-	initializeColour();
 }
 
 

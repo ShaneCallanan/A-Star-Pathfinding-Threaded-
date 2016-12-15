@@ -10,13 +10,13 @@ private:
 	bool m_calculatingPath;
 	vector<Tile*> m_path;
 
-	virtual void initializeColour() override;
-	virtual void move(unsigned int dt);
+	void move(unsigned int dt);
 
 public:
 	NPC();
 	NPC(Tile* tile);
 	void update(unsigned int dt) override;
+	void initializeColour() override;
 	void setCalculatingPath(bool value);
 	void setPath(vector<Tile*> path);
 	bool isCalculatingPath() const;

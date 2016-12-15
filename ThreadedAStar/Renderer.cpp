@@ -89,6 +89,8 @@ void Renderer::drawFillRect(const Rect& rectangle, const Colour& colour) const
 
 void Renderer::drawAtom(Point2D centre, int radius, const Colour& colour) const
 {
+	SDL_SetRenderDrawColor(m_renderer, colour.r, colour.g, colour.b, colour.a);
+
 	int angle = 15;
 	int angleIncrement = 15;
 	int maxAngle = 360;

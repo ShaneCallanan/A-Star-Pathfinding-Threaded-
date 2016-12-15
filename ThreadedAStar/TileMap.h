@@ -16,6 +16,7 @@ private:
 	Size2D m_size;
 	vector<vector<Tile>> m_tiles;
 	vector<Rect> m_walls;
+	vector<Tile*> m_waypoints;
 
 	TileTypes getTileType(int mapX, int mapY);
 
@@ -25,6 +26,7 @@ public:
 	void initializeZones(Rect playerZone, Rect npcZone);
 	void initializeWalls(pair<int, int> wallCount, Size2D wallSize);
 	void initializeTiles(Size2D windowSize);
+	void initializeWaypoints(int numWaypoints);
 	void update(unsigned int dt);
 	void render(Renderer* renderer) const;
 	Tile* getRandomTile();

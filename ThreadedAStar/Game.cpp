@@ -32,6 +32,7 @@ void Game::initialize()
 		m_tileMap.initializeTiles(m_settings.windowSize);
 		m_pathGenerator.setTileMap(&m_tileMap);
 		m_player = Player(m_tileMap.getRandomTileOfType(TileTypes::PLAYERZONE));
+		m_player.initializeColour();
 		initializeNPCs();
 	}
 }
@@ -50,6 +51,8 @@ void Game::initializeNPCs()
 		} while (find(startingTiles.begin(), startingTiles.end(), tile) != startingTiles.end());
 
 		startingTiles.push_back(tile);
+		NPC npc = NPC(tile);
+		npc.initializeColour();
 		m_NPCs.push_back(NPC(tile));
 	}
 }
@@ -102,6 +105,7 @@ void Game::render(Renderer* renderer) const
 	renderer->clear(Colour(160, 150, 235));
 	m_tileMap.render(renderer);
 	renderNPCs(renderer);
+	m_player.render(renderer);
 	renderer->present();
 }
 

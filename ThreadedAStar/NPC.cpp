@@ -7,7 +7,6 @@ NPC::NPC(Tile* tile) :
 	Player(tile),
 	m_calculatingPath(false)
 {
-	
 }
 
 
