@@ -7,7 +7,7 @@ Player::Player() {}
 Player::Player(Tile* tile) :
 	m_aligned(true),
 	m_currentTile(tile),
-	m_speed(2.5f)
+	m_speed(0.5f)
 {
 	m_radius = tile->getRectangle()->size.w / 2;
 	m_centre = tile->getRectangle()->getCentre();

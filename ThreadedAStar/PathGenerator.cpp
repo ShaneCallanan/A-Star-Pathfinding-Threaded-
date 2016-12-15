@@ -55,13 +55,13 @@ void PathGenerator::generatePath(NPC* npc, Tile* startNode, Tile* endNode)
 			while (currentNodeInfo->parent != nullptr)
 			{
 				path.push_back(currentNode);
-				//drawPathNode(currentNode);
+				drawPathNode(currentNode);
 				currentNode = currentNodeInfo->parent;
 				currentNodePos = currentNode->getMapPos();
 				currentNodeInfo = &nodeData[currentNodePos.x][currentNodePos.y];
 			}
 
-			//drawStartEndNode(startNode, endNode);
+			drawStartEndNode(startNode, endNode);
 			break;
 		}
 		else

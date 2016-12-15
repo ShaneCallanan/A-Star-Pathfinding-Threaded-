@@ -103,7 +103,7 @@ void TileMap::initializeWaypoints()
 	for (int i = 0; i < m_waypointPoaitions.size(); i++)
 	{
 		Point2D* mapPos = &m_waypointPoaitions[i];
-		Tile* waypoint = &m_tiles[mapPos->x][mapPos->y];
+		Tile* waypoint = getTile(mapPos->x, mapPos->y);
 		waypoint->setColour(Colour(255, 255, 0, 255));
 		m_waypoints.push_back(waypoint);
 	}
