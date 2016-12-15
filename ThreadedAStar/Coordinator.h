@@ -20,6 +20,7 @@ private:
 	deque<Worker*> m_workers;
 	SDL_mutex* m_mutex;
 	int numWorking = 0;
+	bool m_useThreads;
 
 public:
 	Coordinator();

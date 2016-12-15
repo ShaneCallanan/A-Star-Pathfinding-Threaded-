@@ -3,6 +3,7 @@
 
 Coordinator* Coordinator::m_instance = 0;
 Coordinator::Coordinator() 
+	: m_useThreads(true)
 {
 	m_jobAccess = SDL_CreateMutex();
 	m_jobAvailable = SDL_CreateSemaphore(0);
@@ -13,7 +14,7 @@ Coordinator::Coordinator()
 
 void Coordinator::initializeWorkers()
 {
-	int numWorkers = thread::hardware_concurrency() - 1;
+	int numWorkers = m_useThreads ? thread::hardware_concurrency() - 1 : 1;
 
 	for (int i = 0; i < numWorkers; i++)
 	{
