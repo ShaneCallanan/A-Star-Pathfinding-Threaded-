@@ -87,10 +87,10 @@ void Game::updateNPCs(unsigned int dt)
 	{
 		NPC* npc = &m_NPCs[i];
 
-		if (!npc->isCalculatingPath() && npc->isAligned())
+		if (!npc->isCalculatingPath() && npc->isStopped())
 		{
 			Tile* startTile = npc->getTile();
-			Tile* endTile = m_player.getTile();
+			Tile* endTile = m_tileMap.getClosestTile(startTile, m_player.getTile());
 			m_coordinator->addJob(bind(&PathGenerator::generatePath, &m_pathGenerator, npc, startTile, endTile));
 			npc->setCalculatingPath(true);
 		}

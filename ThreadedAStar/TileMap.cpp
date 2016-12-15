@@ -143,13 +143,36 @@ void TileMap::render(Renderer* renderer) const
 
 
 
-//int TileMap:
+int TileMap::calculateDistance(Tile* tile1, Tile* tile2)
+{
+	Point2D tilePos1 = tile1->getMapPos();
+	Point2D tilePos2 = tile2->getMapPos();
+	Point2D diff = tilePos2 - tilePos1;
+
+	return abs(diff.x) + abs(diff.y);
+}
 
 
 
 Tile* TileMap::getClosestTile(Tile* start, Tile* end)
 {
-	return new Tile();
+	int G = calculateDistance(start, end);
+	int H = G;
+	Tile* closestTile = end;
+
+	for (int i = 0; i < m_waypoints.size(); i++)
+	{
+		int GTemp = calculateDistance(start, m_waypoints[i]);
+		int HTemp = calculateDistance(m_waypoints[i], end);
+		
+		if (GTemp < G && HTemp < H)
+		{
+			G = GTemp;
+			closestTile = m_waypoints[i];
+		}
+	}
+
+	return closestTile;
 }
 
 TileTypes TileMap::getTileType(int mapX, int mapY)

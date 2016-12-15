@@ -61,3 +61,8 @@ bool NPC::isCalculatingPath() const
 {
 	return m_calculatingPath;
 }
+
+bool NPC::isStopped()
+{
+	return m_path.size() == 0;
+}

@@ -1,2 +1,8 @@
-﻿  ThreadedAStar.vcxproj -> C:\Users\unum\Desktop\GameEngineeringII\x64\Debug\ThreadedAStar.exe
+﻿  Player.cpp
+c:\users\unum\desktop\gameengineeringii\threadedastar\basictypes.h(67): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\unum\desktop\gameengineeringii\threadedastar\basictypes.h(68): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\unum\desktop\gameengineeringii\threadedastar\basictypes.h(69): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\unum\desktop\gameengineeringii\threadedastar\basictypes.h(70): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+c:\users\unum\desktop\gameengineeringii\threadedastar\player.cpp(12): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  ThreadedAStar.vcxproj -> C:\Users\unum\Desktop\GameEngineeringII\x64\Debug\ThreadedAStar.exe
   ThreadedAStar.vcxproj -> C:\Users\unum\Desktop\GameEngineeringII\x64\Debug\ThreadedAStar.pdb (Partial PDB)

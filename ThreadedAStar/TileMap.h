@@ -30,6 +30,7 @@ public:
 	void initializeWaypoints();
 	void update(unsigned int dt);
 	void render(Renderer* renderer) const;
+	int calculateDistance(Tile* tile1, Tile* tile2);
 	Tile* getClosestTile(Tile* start, Tile* end);
 	Tile* getRandomTile();
 	Tile* getRandomTileOfType(TileTypes type);

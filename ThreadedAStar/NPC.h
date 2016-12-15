@@ -19,5 +19,6 @@ public:
 	void initializeColour() override;
 	void setCalculatingPath(bool value);
 	void setPath(vector<Tile*> path);
+	bool isStopped();
 	bool isCalculatingPath() const;
 };
