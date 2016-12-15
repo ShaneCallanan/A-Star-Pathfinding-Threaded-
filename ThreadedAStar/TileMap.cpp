@@ -66,6 +66,7 @@ void TileMap::initializeTiles(Size2D windowSize)
 	for (int i = 0; i < columns; i++)
 	{
 		vector<Tile> rowOfTiles;
+		Tile* prevTile = nullptr;
 
 		for (int j = 0; j < rows; j++)
 		{
@@ -75,16 +76,37 @@ void TileMap::initializeTiles(Size2D windowSize)
 			tile.setRectangle(Rect(tilePosition, tileSize));
 			tile.initializeColour();
 
+			if (prevTile != nullptr)
+			{
+				if (prevTile->getType() == TileTypes::WALL)
+				{
+					if (tileType != TileTypes::WALL)
+						m_waypointPoaitions.push_back(tile.getMapPos());
+				}
+				else
+				{
+					if (tileType == TileTypes::WALL)	
+						m_waypointPoaitions.push_back(prevTile->getMapPos());
+				}
+			}
+
 			rowOfTiles.push_back(tile);
+			prevTile = &rowOfTiles.back();
 		}
 
 		m_tiles.push_back(rowOfTiles);
 	}
 }
 
-void TileMap::initializeWaypoints(int numWaypoints)
+void TileMap::initializeWaypoints()
 {
-
+	for (int i = 0; i < m_waypointPoaitions.size(); i++)
+	{
+		Point2D* mapPos = &m_waypointPoaitions[i];
+		Tile* waypoint = &m_tiles[mapPos->x][mapPos->y];
+		waypoint->setColour(Colour(255, 255, 0, 255));
+		m_waypoints.push_back(waypoint);
+	}
 }
 
 
@@ -120,6 +142,15 @@ void TileMap::render(Renderer* renderer) const
 }
 
 
+
+//int TileMap:
+
+
+
+Tile* TileMap::getClosestTile(Tile* start, Tile* end)
+{
+	return new Tile();
+}
 
 TileTypes TileMap::getTileType(int mapX, int mapY)
 {

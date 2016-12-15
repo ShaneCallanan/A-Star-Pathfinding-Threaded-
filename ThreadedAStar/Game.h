@@ -22,7 +22,7 @@ private:
 	unsigned int m_prevTime;
 	Renderer m_renderer;
 	bool m_running;
-	GameSettings2 m_settings;
+	GameSettings1 m_settings;
 	TileMap m_tileMap;
 
 	void initializeNPCs();

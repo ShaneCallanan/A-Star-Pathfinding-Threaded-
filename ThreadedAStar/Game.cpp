@@ -30,6 +30,7 @@ void Game::initialize()
 		m_tileMap.initializeZones(m_settings.playerZoneAsPercentage, m_settings.npcZoneAsPercentage);
 		m_tileMap.initializeWalls(wallCount, wallSize);
 		m_tileMap.initializeTiles(m_settings.windowSize);
+		m_tileMap.initializeWaypoints();
 		m_pathGenerator.setTileMap(&m_tileMap);
 		m_player = Player(m_tileMap.getRandomTileOfType(TileTypes::PLAYERZONE));
 		m_player.initializeColour();
