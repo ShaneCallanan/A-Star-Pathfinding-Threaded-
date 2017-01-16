@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  Player.cpp
+  Lab04_AbstractFactory.cpp
+c:\users\gameuser\desktop\gameengineeringii_2\abstractfactory\lab04_abstractfactory\lab04_abstractfactory.cpp(23): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Factory.cpp
+  CharacterFactory.cpp
+  Character.cpp
+  Boss.cpp
+  Generating Code...
+  Lab04_AbstractFactory.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII_2\AbstractFactory\x64\Debug\Lab04_AbstractFactory.exe
+  Lab04_AbstractFactory.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII_2\AbstractFactory\x64\Debug\Lab04_AbstractFactory.pdb (Full PDB)
