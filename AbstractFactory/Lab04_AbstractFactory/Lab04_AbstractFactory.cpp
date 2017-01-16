@@ -25,6 +25,8 @@ int main()
 		characters.erase(characters.begin() + i);
 	}
 
+	delete factory;
+
     return 0;
 }
 
