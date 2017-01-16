@@ -1,15 +1,15 @@
 #pragma once
 
-#include "Printer.h"
+#include "PrinterInterface.h"
 
 class PrinterHandler
 {
 private:
-	Printer* printer;
+	PrinterInterface* m_printer;
 
 public:
-	PrinterHandler();
+	PrinterHandler(PrinterInterface* printer);
 	~PrinterHandler();
-	Printer* operator->();
+	PrinterInterface* operator->();
 };
 

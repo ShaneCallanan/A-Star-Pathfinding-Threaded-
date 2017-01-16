@@ -2,18 +2,18 @@
 #include "PrinterHandler.h"
 
 
-PrinterHandler::PrinterHandler() : printer(new Printer())
+PrinterHandler::PrinterHandler(PrinterInterface* printer) : m_printer(printer)
 {
 }
 
 
 PrinterHandler::~PrinterHandler()
 {
-	delete printer;
+	delete m_printer;
 }
 
 
-Printer* PrinterHandler::operator->()
+PrinterInterface* PrinterHandler::operator->()
 {
-	return printer;
+	return m_printer;
 }

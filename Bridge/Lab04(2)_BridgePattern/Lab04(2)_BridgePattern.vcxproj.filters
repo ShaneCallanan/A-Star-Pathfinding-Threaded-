@@ -24,10 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Printer.h">
+    <ClInclude Include="PrinterHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrinterHandler.h">
+    <ClInclude Include="ConsolePrinter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrinterInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +41,13 @@
     <ClCompile Include="Lab04(2)_BridgePattern.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Printer.cpp">
+    <ClCompile Include="PrinterHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PrinterHandler.cpp">
+    <ClCompile Include="ConsolePrinter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrinterInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,11 +3,12 @@
 
 #include "stdafx.h"
 #include "PrinterHandler.h"
+#include "ConsolePrinter.h"
 
 
 int main()
 {
-	PrinterHandler hPrinter = PrinterHandler();
+	PrinterHandler hPrinter = PrinterHandler(new ConsolePrinter());
 	hPrinter->printText("First bit of text");
 	hPrinter->printText("Second bit of text");
 	hPrinter->printText("Turning off printer...");
