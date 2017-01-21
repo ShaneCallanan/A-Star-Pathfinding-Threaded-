@@ -1,0 +1,35 @@
+﻿  InputManager.cpp
+  ConsoleApplication2.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication2\Debug\ConsoleApplication2.exe
+  ConsoleApplication2.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication2\Debug\ConsoleApplication2.pdb (Full PDB)
+  .\dependancies\dlls\openal32.dll
+  .\dependancies\dlls\sfml-audio-2.dll
+  .\dependancies\dlls\sfml-audio-d-2.dll
+  .\dependancies\dlls\sfml-graphics-2.dll
+  .\dependancies\dlls\sfml-graphics-d-2.dll
+  .\dependancies\dlls\sfml-network-2.dll
+  .\dependancies\dlls\sfml-network-d-2.dll
+  .\dependancies\dlls\sfml-system-2.dll
+  .\dependancies\dlls\sfml-system-d-2.dll
+  .\dependancies\dlls\sfml-window-2.dll
+  .\dependancies\dlls\sfml-window-d-2.dll
+         11 file(s) copied.
+  A subdirectory or file C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication2\Debug\assets already exists.
+  A subdirectory or file C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication2\Debug\loadFiles already exists.
+  .\assets\abductor.png
+  .\assets\asteroid.png
+  .\assets\astronaut.png
+  .\assets\bgr.jpg
+  .\assets\bgr.png
+  .\assets\emp.png
+  .\assets\firerate.png
+  .\assets\hyperjump.png
+  .\assets\invincibility.png
+  .\assets\missile.png
+  .\assets\nest.png
+  .\assets\player.png
+  .\assets\pokeball.png
+  .\assets\terrain.png
+         14 file(s) copied.
+  .\loadFiles\loadTextures.txt
+  .\loadFiles\readme.txt
+          2 file(s) copied.
