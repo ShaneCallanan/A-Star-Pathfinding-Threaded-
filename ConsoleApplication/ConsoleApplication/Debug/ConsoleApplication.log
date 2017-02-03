@@ -1,0 +1,4 @@
+﻿  ConsoleApplication.cpp
+c:\users\gameuser\desktop\gameengineeringii\consoleapplication\consoleapplication\consoleapplication.cpp(18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  ConsoleApplication.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication\Debug\ConsoleApplication.exe
+  ConsoleApplication.vcxproj -> C:\Users\gameuser\Desktop\GameEngineeringII\ConsoleApplication\Debug\ConsoleApplication.pdb (Full PDB)
