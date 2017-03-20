@@ -149,6 +149,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="ControlComponent.h" />
     <ClInclude Include="ControlSystem.h" />
+    <ClInclude Include="DamageSystem.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="EntityFactory.h" />
     <ClInclude Include="EntityTypes.h" />
@@ -164,6 +165,7 @@
     <ClCompile Include="ConsoleApplication.cpp" />
     <ClCompile Include="ControlComponent.cpp" />
     <ClCompile Include="ControlSystem.cpp" />
+    <ClCompile Include="DamageSystem.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="EntityFactory.cpp" />
     <ClCompile Include="GameSystem.cpp" />

@@ -9,6 +9,7 @@
 #include "AISystem.h"
 #include "ControlSystem.h"
 #include "RenderSystem.h"
+#include "DamageSystem.h"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ int main()
 	vector<GameSystem*> systems;
 	systems.push_back(new ControlSystem());
 	systems.push_back(new AISystem());
+	systems.push_back(new DamageSystem());
 	systems.push_back(new RenderSystem());
 
 	vector<Entity*> entities;
@@ -37,6 +39,7 @@ int main()
 			if (dynamic_cast<AISystem*>(system) != nullptr) { cout << endl << endl << "AI SYSTEM: " << endl << endl; }
 			if (dynamic_cast<ControlSystem*>(system) != nullptr) { cout << endl << endl << "CONTROL SYSTEM: " << endl << endl; }
 			if (dynamic_cast<RenderSystem*>(system) != nullptr) { cout << endl << endl << "RENDER SYSTEM: " << endl << endl; }
+			if (dynamic_cast<DamageSystem*>(system) != nullptr) { cout << endl << endl << "DAMAGE SYSTEM: " << endl << endl; }
 
 			for (Entity* entity : entities)
 			{

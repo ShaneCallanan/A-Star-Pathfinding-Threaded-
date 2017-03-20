@@ -12,9 +12,7 @@ public:
 	~AISystem();
 	void update(Entity* entity) override;
 	void applyPositionLogic(Entity* e, PositionComponent* p);
-	void applyHealthLogic(EntityType type, PositionComponent* p, HealthComponent* h);
 	void printPosition(EntityType type, PositionComponent* p);
-	void printHealthStatus(string type, HealthComponent* h);
 	void moveInRandomDirection(EntityType type, PositionComponent* p);
 	bool isDead(HealthComponent* h);
 };
